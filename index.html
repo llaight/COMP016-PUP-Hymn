@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUP: PUP Hymn</title>
+    <link rel="icon" type="image/x-icon" href="pup-logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        @media screen and (max-width: 600px) {
+            .header-text, .subtext{
+                display: none;
+            }
+        }
+        .itonabeh::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .itonabeh::-webkit-scrollbar-track {
+            background: #f0f2f5;
+            border-radius: 10px;
+        }
+
+        .itonabeh::-webkit-scrollbar-thumb {
+            background: #a52a2a;
+            border-radius: 10px;
+            border: 2px solid #f0f2f5;
+        }
+
+        .itonabeh::-webkit-scrollbar-thumb:hover {
+            background: #800000;
+        }
+        .custom-audio {
+            width: 100%; 
+            outline: none; 
+        }
+
+        .custom-audio::-webkit-media-controls-panel {
+            background-color: #b15353; /* Custom control panel color */
+            border-radius: 12px;
+        }
+
+        .custom-audio::-webkit-media-controls-play-button,
+        .custom-audio::-webkit-media-controls-pause-button {
+            background-color: #800000; 
+            border-radius: 50%; /* Circular play/pause button */
+        }
+
+        .custom-audio::-webkit-media-controls-volume-slider {
+            background-color: #f0f2f5; /* Light background for better visibility */
+            border-radius: 10px;
+        }
+
+        .line {
+            font-size: 14px;
+            text-align: center;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+        }
+
+        .line.active {
+            color: #800000;
+            font-weight: bold;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+            padding: 2px 4px;
+        }
+
+        .social-icons a{
+            text-decoration: none;
+            padding: 10px;
+            background-color: white;
+            margin: 10px;
+            border-radius: 50%;
+        }
+        
+        .social-icons a i{
+            font-size: 2em;
+            color: #282829;
+            opacity: 0.9;
+        }
+
+        .social-icons a:hover{
+            background-color: #282829;
+            transition: 0.5s;
+        }
+
+        .social-icons a:hover i{
+            color: white;
+            transition: 0.5s;
+        }
+    </style>
+    
+</head>
+<body style="background-color: rgb(241, 235, 235);">
+    <!-- HEADER -->
+    <div style="display: flex; align-items: center; background-color: white; width: 100%; padding: 10px; box-shadow: 0 0 4px 0 rgb(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);">
+        <img src="pup-logo.png" alt="Logo" style="height: 80px;">
+        <div style="display: flex; flex-direction: column; padding-left: 10px;">
+            <div class="header-text" style="font-family: Trajan Pro; font-size: 25px; font-weight: bold; padding: 10px 10px 0 10px; color: maroon;">Polytechnic University of the Philippines</div>
+            <div class="subtext" style="font-family: Trajan Pro; font-size: 18px; font-weight: bold; padding: 0 10px 10px 10px; color: goldenrod;">The Country's 1st PolytechnicU</div>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+     <div class="main" style="display: flex; align-items: center; justify-content: center; width: 100%; min-height: 75vh; background-color: #e3edf7;">
+        <div class="content" style="box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7); width:350px; border-radius:  15px; padding: 25px 30px;">
+            <div class="lyrics-box">
+                <div class="itonabeh" 
+                style="background-color: whitesmoke; width: 300px; height: 350px; margin: 0 auto; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); border-radius: 10px;  /* Slightly rounded corners */
+                padding: 10px; overflow-y: auto; max-height: 250px;">
+                    <p style="padding: 5px; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+                        <span class="line" data-time="13">Sintang Paaralan</span><br>
+                        <span class="line" data-time="15">Tanglaw ka ng bayan</span><br>
+                        <span class="line" data-time="18">Pandayan ng isip ng kabataan</span><br>
+                        <span class="line" data-time="24">Kami ay dumating nang salat sa yaman</span><br>
+                        <span class="line" data-time="29">Hanap na dunong ay iyong alay</span><br>
+                        <span class="line" data-time="35">Ang layunin mong makatao</span><br>
+                        <span class="line" data-time="41">Dinarangal ang Pilipino</span><br>
+                        <span class="line" data-time="47">Ang iyong aral, diwa, adhikang taglay</span><br>
+                        <span class="line" data-time="53">PUP, aming gabay</span><br>
+                        <span class="line" data-time="56">Paaralang dakila</span><br>
+                        <span class="line" data-time="62">PUP, pinagpala</span><br>
+                        <span class="line" data-time="68">Gagamitin ang karunungan</span><br>
+                        <span class="line" data-time="74">Mula sa iyo, para sa bayan</span><br>
+                        <span class="line" data-time="80">Ang iyong aral, diwa, adhikang taglay</span><br>
+                        <span class="line" data-time="86">PUP, aming gabay</span><br>
+                        <span class="line" data-time="89">Paaralang dakila</span><br>
+                        <span class="line" data-time="95">PUP, pinagpala</span>
+                    </p>
+                </div>
+                <p class="title" style="margin-top: 10px; text-align: center; opacity: 0.9; font-size: 19px; font-family: Arial, Helvetica, sans-serif;opacity: 0.8; font-weight: bold;">PUP Hymn</p>
+                <p class="artist" style="margin-top: 5px; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; opacity: 0.5;">S. Calabig, S. Roldan, and R. Amaranto</p>
+
+            </div>
+            <audio controls class="custom-audio"style="margin-top: 10px;">
+                <source src="Imno ng PUP (The PUP Hymn) [ ezmp3.co ].mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+     </div>
+
+     <script>
+        const audio = document.querySelector('.custom-audio');
+        const lines = document.querySelectorAll('.line');
+    
+        audio.addEventListener('timeupdate', () => {
+            const currentTime = audio.currentTime;
+    
+            lines.forEach(line => {
+                const lineTime = parseFloat(line.getAttribute('data-time'));
+                const nextLineTime = parseFloat(line.nextElementSibling?.getAttribute('data-time')) || Infinity;
+    
+                if (currentTime >= lineTime && currentTime < nextLineTime) {
+                    line.classList.add('active');
+                } else {
+                    line.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    <footer style="background-color:#282829;">
+        <div class="foot-container" style="width: 100%; padding: 40px 20px 10px;">
+            <div class="social-icons" style="display: flex; justify-content: center; margin-top: -25px;">
+                <a href="https://www.facebook.com/ThePUPOfficial" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://x.com/ThePUPOfficial" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/user/pupcreatv" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                <p style="color: white; text-align: center; margin-top: 10px;">Copyright &copy; 2025; COMP016Design by <span class="name" 
+                    style="opacity: 0.7; text-transform: uppercase; letter-spacing: 1px; font-family: 400; margin: 0px 5px;"
+                    >Loro-BSCS3-1</span></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
